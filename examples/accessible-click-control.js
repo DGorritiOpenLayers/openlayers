@@ -51,8 +51,10 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
                     if (evt.keyCode == 73) { // "i"
                         if (this.active) {
                             this.deactivate();
+                            alert("Desacivado");
                         } else {
                             this.activate();
+                            alert("Acivado");
                         }
                     }
                 },
@@ -62,8 +64,8 @@ OpenLayers.Control.KeyboardClick = OpenLayers.Class(OpenLayers.Control, {
     },
 
     onClick: function(geometry) {
-        alert("You clicked near " + geometry.x + " N, " +
-                                    geometry.y + " E");
+        alert("You clicked near " + geometry.y + " N, " +
+                                    geometry.x + " E");
     },
 
     activate: function() {
